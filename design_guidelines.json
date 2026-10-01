@@ -1,0 +1,101 @@
+{
+  "theme": "dark",
+  "archetype": "7 (Electric & Neon)",
+  "rationale": "The user requested a dark theme with purple, blue, and cyan neon gradients. We refine this into a premium 'Deep Obsidian' base with electric accents. To avoid generic AI-slop, we use heavy grain textures, high-end glassmorphism with 1px structural borders, and a sophisticated font pairing.",
+  "colors": {
+    "background": "#05050A",
+    "surface": "#0D0D14",
+    "surface_glass": "rgba(13, 13, 20, 0.6)",
+    "primary": "#00E5FF",
+    "primary_hover": "#00B3CC",
+    "accent_violet": "#7000FF",
+    "accent_magenta": "#FF007F",
+    "text_main": "#FFFFFF",
+    "text_muted": "#8A8A9E",
+    "border": "rgba(255, 255, 255, 0.08)",
+    "success": "#00FF66",
+    "warning": "#FFB800",
+    "destructive": "#FF3333"
+  },
+  "typography": {
+    "font_headings": "Outfit",
+    "font_body": "IBM Plex Sans",
+    "font_mono": "Azeret Mono",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-medium",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base leading-relaxed",
+      "mono_labels": "text-xs tracking-[0.2em] uppercase font-mono"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-8 sm:p-12",
+    "grid_gap": "gap-6 lg:gap-8",
+    "dashboard_grid": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+    "glass_panel_classes": "bg-black/40 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,229,255,0.05)] rounded-xl"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-[#05050A] font-medium hover:bg-primary_hover transition-colors rounded-none border border-transparent shadow-[0_0_15px_rgba(0,229,255,0.3)]",
+      "secondary": "bg-transparent text-white border border-white/20 hover:border-white/50 transition-colors rounded-none",
+      "ghost": "bg-transparent text-text_muted hover:text-white transition-colors"
+    },
+    "inputs": "bg-black/50 border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary text-white rounded-md",
+    "charts": "recharts with custom tooltips, grids disabled or very subtle (stroke: rgba(255,255,255,0.05)), glowing lines for performance graphs"
+  },
+  "animations": {
+    "page_transition": "framer-motion, opacity 0 to 1, y 20 to 0",
+    "hover_lift": "hover:-translate-y-1 hover:shadow-lg transition-all duration-300",
+    "background_particles": "TSParticles or pure CSS slow moving radial gradients"
+  },
+  "libraries": {
+    "icons": "lucide-react",
+    "charts": "recharts",
+    "animations": "framer-motion",
+    "three_d": "three, @react-three/fiber, @react-three/drei, react-tsparticles"
+  },
+  "media": [
+    {
+      "category": "hero_background",
+      "url": "https://static.prod-images.emergentagent.com/jobs/f823e4fc-c17c-4ef2-ae4b-b5b42531b005/images/c89e338a47dde6f482717d633b5adbc7dae86d81c23ff2fd8c535e2fadbfbe08.png",
+      "description": "Abstract deep space dark background with glowing cyan and violet particles."
+    },
+    {
+      "category": "ai_avatar",
+      "url": "https://static.prod-images.emergentagent.com/jobs/f823e4fc-c17c-4ef2-ae4b-b5b42531b005/images/257cef8c41f8a921a79b69ff5add91871fd50c0509b432376d7309bd676edddd.png",
+      "description": "Futuristic 3D holographic AI avatar head."
+    },
+    {
+      "category": "domain_dsa",
+      "url": "https://images.unsplash.com/photo-1648757838556-2ca6ec323d55?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxoYWNrZXIlMjBjb2RpbmclMjBuaWdodHxlbnwwfHx8fDE3NzY3OTE3Mzh8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Hacker coding in dark."
+    },
+    {
+      "category": "domain_projects",
+      "url": "https://images.pexels.com/photos/7562088/pexels-photo-7562088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Abstract tech circuit."
+    },
+    {
+      "category": "domain_behavioral",
+      "url": "https://images.pexels.com/photos/8107903/pexels-photo-8107903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Futuristic person neon."
+    }
+  ],
+  "pages": {
+    "auth": "Split screen layout. Left: Hero Background image with glassy overlay. Right: Minimalist form in surface_glass panel. Deep black base.",
+    "dashboard": "Control Room grid. Top: Overview stats. Middle: Recharts performance graph with glowing neon lines. Floating AI avatar thumbnail. Deep obsidian background.",
+    "domain_selection": "3D tilt cards (framer-motion) displaying domains. Hover reveals neon borders. Dark space background.",
+    "ai_interview": "Immersive view. Split screen. Left: AI Avatar prominent with voice visualizer (canvas/framer-motion). Right: Monaco Code Editor with dark high-contrast theme. Glass header.",
+    "feedback_report": "Data-heavy but clean. Radar charts, progress bars with cyan/violet gradients. Detailed breakdown panels."
+  },
+  "instructions_to_main_agent": [
+    "Install Google Fonts 'Outfit', 'IBM Plex Sans', and 'Azeret Mono'. Use Outfit for all headings, Azeret Mono for code/stats, and IBM Plex Sans for body.",
+    "Apply 'data-testid' to all interactive elements.",
+    "Initialize tailwind config with the provided color hexes (no generic colors). Map primary to #00E5FF.",
+    "For the 3D particles background, use 'react-tsparticles' or a CSS-based glowing orb background behind the glassy surfaces.",
+    "Avoid using card components from Shadcn directly if they feel too flat; customize them with the 'glass_panel_classes' provided.",
+    "Ensure Monaco Code editor has a custom dark theme that matches the obsidian background.",
+    "Install @phosphor-icons/react for icons if preferred over lucide."
+  ]
+}
